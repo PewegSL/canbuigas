@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurante Can Buïgas - Experiencia culinaria de lujo con cocina moderna y tradicional">
+    <title>Restaurante Can Buïgas - Gastronomía de excelencia</title>
+    <!-- BANDERAS SVG - IMPORTANTE: Esta línea va PRIMERA -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- Selector de idioma inicial - CON BANDERAS SVG PROFESIONALES -->
+    <div id="languageSelector" class="language-modal" style="display: flex;">
+        <div class="language-modal-content">
+            <div class="language-header">
+                <h2>Can Buïgas</h2>
+                <p class="select-text">Selecciona tu idioma</p>
+                <p class="select-subtext">Select your language / 选择您的语言 / अपनी भाषा चुनें</p>
+            </div>
+            <div class="language-options">
+                <!-- Primer fila: Idiomas principales -->
+                <button class="language-btn" data-lang="es">
+                    <span class="flag-icon fi fi-es"></span>
+                    <span class="lang-name">Español</span>
+                    <span class="lang-native">Spanish</span>
+                </button>
+                <button class="language-btn" data-lang="en">
+                    <span class="flag-icon fi fi-gb"></span>
+                    <span class="lang-name">English</span>
+                    <span class="lang-native">English</span>
+                </button>
+                <button class="language-btn" data-lang="zh">
+                    <span class="flag-icon fi fi-cn"></span>
+                    <span class="lang-name">中文</span>
+                    <span class="lang-native">Chinese</span>
+                </button>
+                <button class="language-btn" data-lang="hi">
+                    <span class="flag-icon fi fi-in"></span>
+                    <span class="lang-name">हिन्दी</span>
+                    <span class="lang-native">Hindi</span>
+                </button>
+                
+                <!-- Segunda fila: Más idiomas -->
+                <button class="language-btn" data-lang="fr">
+                    <span class="flag-icon fi fi-fr"></span>
+                    <span class="lang-name">Français</span>
+                    <span class="lang-native">French</span>
+                </button>
+                <button class="language-btn" data-lang="de">
+                    <span class="flag-icon fi fi-de"></span>
+                    <span class="lang-name">Deutsch</span>
+                    <span class="lang-native">German</span>
+                </button>
+                <button class="language-btn" data-lang="ar">
+                    <span class="flag-icon fi fi-sa"></span>
+                    <span class="lang-name">العربية</span>
+                    <span class="lang-native">Arabic</span>
+                </button>
+                <button class="language-btn" data-lang="ru">
+                    <span class="flag-icon fi fi-ru"></span>
+                    <span class="lang-name">Русский</span>
+                    <span class="lang-native">Russian</span>
+                </button>
+                
+                <!-- Tercera fila: Más idiomas -->
+                <button class="language-btn" data-lang="ja">
+                    <span class="flag-icon fi fi-jp"></span>
+                    <span class="lang-name">日本語</span>
+                    <span class="lang-native">Japanese</span>
+                </button>
+                <button class="language-btn" data-lang="pt">
+                    <span class="flag-icon fi fi-pt"></span>
+                    <span class="lang-name">Português</span>
+                    <span class="lang-native">Portuguese</span>
+                </button>
+                <button class="language-btn" data-lang="it">
+                    <span class="flag-icon fi fi-it"></span>
+                    <span class="lang-name">Italiano</span>
+                    <span class="lang-native">Italian</span>
+                </button>
+                <button class="language-btn" data-lang="ko">
+                    <span class="flag-icon fi fi-kr"></span>
+                    <span class="lang-name">한국어</span>
+                    <span class="lang-native">Korean</span>
+                </button>
+            </div>
+            
+            <!-- QR Code para compartir -->
+            <div class="qr-section">
+                <div class="qr-code-placeholder">
+                    <div class="qr-icon"><i class="fas fa-qrcode"></i></div>
+                    <p>Escanea / Scan</p>
+                </div>
+                <div class="qr-info">
+                    <h3>Can Buïgas Restaurant</h3>
+                    <p>Escanee el código QR para acceder rápidamente a nuestro sitio web</p>
+                    <p>Scan the QR code to quickly access our website</p>
+                </div>
+            </div>
+            
+            <!-- Botón para continuar sin cambiar -->
+            <div class="continue-section">
+                <button id="continueBtn" class="btn-gold">
+                    <i class="fas fa-arrow-right"></i> Continuar con Español
+                </button>
+                <p class="hint">Puedes cambiar el idioma en cualquier momento desde el menú superior</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cabecera -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Can Buïgas</h1>
+                    <p class="tagline">Experiencia Gastronómica</p>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active" data-i18n="home">Inicio</a>
+                    <a href="#menu" class="nav-link" data-i18n="menu">Menú</a>
+                    <a href="#daily-menu" class="nav-link" data-i18n="dailyMenu">Menú del Día</a>
+                    <a href="#contact" class="nav-link" data-i18n="contact">Contacto</a>
+                    
+                    <!-- Selector de idiomas en navbar CON BANDERAS EMOTICONOS -->
+                 <!-- Selector de idiomas en navbar CON BANDERAS SVG PROFESIONALES -->
+<!-- Selector de idiomas en navbar CON EMOJIS (sin siglas) -->
+<!-- Selector de idiomas en navbar CON BANDERAS SVG (sin siglas) -->
+<div class="language-switcher">
+    <div class="current-language">
+        <span class="flag-icon-mini fi fi-es" id="currentFlag"></span>
+        <select id="languageSwitch">
+            <option value="es" data-flag="fi-es">Español</option>
+            <option value="en" data-flag="fi-gb">English</option>
+            <option value="zh" data-flag="fi-cn">中文</option>
+            <option value="hi" data-flag="fi-in">हिन्दी</option>
+            <option value="fr" data-flag="fi-fr">Français</option>
+            <option value="de" data-flag="fi-de">Deutsch</option>
+            <option value="ar" data-flag="fi-sa">العربية</option>
+            <option value="ru" data-flag="fi-ru">Русский</option>
+            <option value="ja" data-flag="fi-jp">日本語</option>
+            <option value="pt" data-flag="fi-pt">Português</option>
+            <option value="it" data-flag="fi-it">Italiano</option>
+            <option value="ko" data-flag="fi-kr">한국어</option>
+        </select>
+    </div>
+</div>
+</div>
+                </div>
+                <button class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Sección Hero -->
+        <section id="home" class="hero">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h2 class="hero-title" data-i18n="heroTitle">Experiencia Can Buïgas</h2>
+                    <p class="hero-subtitle" data-i18n="heroSubtitle">Sabores exclusivos en un ambiente de lujo</p>
+                    <a href="#menu" class="btn-primary" data-i18n="viewMenu">Ver Menú</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Menú -->
+        <section id="menu" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="ourMenu">Nuestro Menú</h2>
+                <p class="section-subtitle" data-i18n="menuSubtitle">Selección de platos creados con ingredientes de primera calidad</p>
+                
+                <div class="menu-categories">
+                    <button class="category-btn active" data-category="all" data-i18n="all">Todos</button>
+                    <button class="category-btn" data-category="starters" data-i18n="starters">Entrantes</button>
+                    <button class="category-btn" data-category="main" data-i18n="mainCourses">Platos Principales</button>
+                    <button class="category-btn" data-category="desserts" data-i18n="desserts">Postres</button>
+                    <button class="category-btn" data-category="drinks" data-i18n="drinks">Bebidas</button>
+                </div>
+                
+                <div class="menu-items">
+                    <!-- Los elementos del menú se cargan dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Menú del Día -->
+        <section id="daily-menu" class="section dark-section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="dailyMenu">Menú del Día</h2>
+                <p class="section-subtitle" data-i18n="dailyMenuSubtitle">Descubre nuestra propuesta gastronómica diaria</p>
+                
+                <div class="daily-menu-container">
+                    <div class="daily-menu-card">
+                        <div class="daily-menu-header">
+                            <h3 data-i18n="todaySpecial">Especial de Hoy</h3>
+                            <div class="price" data-i18n="priceDailyMenu">25€</div>
+                        </div>
+                        <div class="daily-menu-content">
+                            <div class="daily-menu-item">
+                                <h4 data-i18n="firstCourse">Primer Plato</h4>
+                                <p data-i18n="firstCourseDesc">Crema de calabaza con crujiente de jamón ibérico y virutas de oro comestible</p>
+                            </div>
+                            <div class="daily-menu-item">
+                                <h4 data-i18n="secondCourse">Segundo Plato</h4>
+                                <p data-i18n="secondCourseDesc">Lomo de lubina al horno con verduras asadas y emulsión de azafrán</p>
+                            </div>
+                            <div class="daily-menu-item">
+                                <h4 data-i18n="dessertCourse">Postre</h4>
+                                <p data-i18n="dessertCourseDesc">Tarta de chocolate negro con salsa de frutos rojos y lámina de oro</p>
+                            </div>
+                            <div class="daily-menu-item">
+                                <h4 data-i18n="includes">Incluye</h4>
+                                <p data-i18n="includesDesc">Pan artesano, agua y café o infusión</p>
+                            </div>
+                        </div>
+                        <button class="btn-secondary" onclick="showReservationForm()" data-i18n="reserveNow">Reservar Ahora</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contactUs">Contacta con Nosotros</h2>
+                <p class="section-subtitle" data-i18n="contactSubtitle">Reserva tu mesa o solicita información</p>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3 data-i18n="address">Dirección</h3>
+                                <p>Calle Gourmet, 123<br>08025 Barcelona</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3 data-i18n="phone">Teléfono</h3>
+                                <p>+34 93 123 45 67</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3 data-i18n="email">Email</h3>
+                                <p>info@canbuigas.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3 data-i18n="hours">Horario</h3>
+                                <p data-i18n="hoursDetail">Lunes a Sábado: 13:00 - 16:00 / 20:00 - 00:00<br>Domingo: 13:00 - 17:00</p>
+                            </div>
+                        </div>
+                        
+                        <!-- QR Code para contacto -->
+                        <div class="contact-qr">
+                            <div class="qr-contact-placeholder">
+                                <div class="qr-contact-icon"><i class="fas fa-qrcode"></i></div>
+                                <p data-i18n="scanContact">Escanea para guardar contacto</p>
+                            </div>
+                            <p data-i18n="qrInfo">Guarda nuestro contacto escaneando el código QR</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="reservationForm">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Nombre completo" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" placeholder="Teléfono" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="date" id="date" required>
+                            </div>
+                            <div class="form-group">
+                                <select id="persons" required>
+                                    <option value="" disabled selected data-i18n="selectPersons">Número de personas</option>
+                                    <option value="1">1 persona</option>
+                                    <option value="2">2 personas</option>
+                                    <option value="3">3 personas</option>
+                                    <option value="4">4 personas</option>
+                                    <option value="5">5 personas</option>
+                                    <option value="6">6 personas</option>
+                                    <option value="7" data-i18n="morePersons">7 personas o más</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" placeholder="Mensaje adicional (alergias, celebración, etc.)" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" data-i18n="sendReservation">Enviar Reserva</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <h3 data-i18n="location">Nuestra Ubicación</h3>
+                    <div class="map">
+                        <!-- Mapa de Google Maps embebido -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.363734833819!2d2.173375515426319!3d41.38589607926421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f1aac0e3a5%3A0x9d5e68a5f8b1f3f4!2sBarcelona!5e0!3m2!1ses!2ses!4v1617100511680!5m2!1ses!2ses" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Can Buïgas</h3>
+                <p data-i18n="footerDescription">Restaurante de gastronomía moderna con ingredientes de máxima calidad y presentación exquisita.</p>
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="quickLinks">Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#home" data-i18n="home">Inicio</a></li>
+                    <li><a href="#menu" data-i18n="menu">Menú</a></li>
+                    <li><a href="#daily-menu" data-i18n="dailyMenu">Menú del Día</a></li>
+                    <li><a href="#contact" data-i18n="contact">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 data-i18n="followUs">Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tripadvisor"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <!-- QR Code en footer -->
+                <div class="footer-qr">
+                    <div class="qr-footer-placeholder">
+                        <i class="fas fa-qrcode"></i>
+                    </div>
+                    <p data-i18n="scanWebsite">Escanea para visitar nuestro sitio</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentYear"></span> Restaurante Can Buïgas. <span data-i18n="allRightsReserved">Todos los derechos reservados.</span></p>
+            <p class="language-credit" data-i18n="languageSupport">Disponible en 12 idiomas</p>
+        </div>
+    </footer>
+
+    <!-- Modal de confirmación de reserva -->
+    <div id="reservationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 data-i18n="reservationSuccess">¡Reserva Confirmada!</h2>
+            <p data-i18n="reservationText">Su reserva ha sido recibida. Le contactaremos pronto para confirmar.</p>
+            <button class="btn-primary" onclick="closeModal()" data-i18n="okButton">Aceptar</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
