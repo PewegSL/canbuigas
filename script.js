@@ -1043,3 +1043,70 @@ languageSwitch.addEventListener('change', function() {
     // Guardar la preferencia
     localStorage.setItem('language', lang);
 });
+// Add this function to sync the visual flags with the hidden select
+function initFlagSelectSync() {
+    const select = document.getElementById('languageSwitch');
+    const currentFlag = document.getElementById('currentFlag');
+    const flagOptions = document.querySelectorAll('.flag-option');
+    
+    // Update flag when select changes
+    select.addEventListener('change', function() {
+        const selectedOption = this.options[this.selectedIndex];
+        const flagClass = selectedOption.getAttribute('data-flag');
+        
+        // Update current flag
+        currentFlag.className = `current-flag fi ${flagClass}`;
+        
+        // Update selected state in visual grid
+        flagOptions.forEach(option => {
+            option.classList.remove('selected');
+            if (option.getAttribute('data-value') === this.value) {
+                option.classList.add('selected');
+            }
+        });
+        
+        // Trigger language change
+        changeLanguage(this.value);
+    });
+    
+    // Make flag options click the hidden select
+    flagOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            const value = this.getAttribute('data-value');
+            select.value = value;
+            
+            // Trigger change event
+            select.dispatchEvent(new Event('change'));
+            
+            // Add visual feedback
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 150);
+        });
+    });
+    
+    // Initialize selected state
+    const initialValue = select.value;
+    flagOptions.forEach(option => {
+        if (option.getAttribute('data-value') === initialValue) {
+            option.classList.add('selected');
+        }
+    });
+}
+
+// Call this when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initFlagSelectSync();
+    
+    // Also update your existing language modal buttons
+    const languageBtns = document.querySelectorAll('.language-btn');
+    languageBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            const select = document.getElementById('languageSwitch');
+            select.value = lang;
+            select.dispatchEvent(new Event('change'));
+        });
+    });
+});
