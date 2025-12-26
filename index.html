@@ -130,10 +130,11 @@
                  <!-- Selector de idiomas en navbar CON BANDERAS SVG PROFESIONALES -->
 <!-- Selector de idiomas en navbar CON EMOJIS (sin siglas) -->
 <!-- Selector de idiomas en navbar CON BANDERAS SVG (sin siglas) -->
+<!-- Language Switcher with hidden select -->
 <div class="language-switcher">
-    <div class="current-language">
-        <span class="flag-icon-mini fi fi-es" id="currentFlag"></span>
-        <select id="languageSwitch">
+    <div class="flag-select-wrapper">
+        <span class="current-flag fi fi-es" id="currentFlag"></span>
+        <select id="languageSwitch" class="flag-select-hidden">
             <option value="es" data-flag="fi-es">Español</option>
             <option value="en" data-flag="fi-gb">English</option>
             <option value="zh" data-flag="fi-cn">中文</option>
@@ -147,8 +148,49 @@
             <option value="it" data-flag="fi-it">Italiano</option>
             <option value="ko" data-flag="fi-kr">한국어</option>
         </select>
+        
+        <!-- Custom flag dropdown display -->
+        <div class="flag-dropdown-display">
+            <div class="flag-grid">
+                <div class="flag-option" data-value="es" data-flag="fi-es" title="Español">
+                    <span class="flag-icon-small fi fi-es"></span>
+                </div>
+                <div class="flag-option" data-value="en" data-flag="fi-gb" title="English">
+                    <span class="flag-icon-small fi fi-gb"></span>
+                </div>
+                <div class="flag-option" data-value="zh" data-flag="fi-cn" title="中文">
+                    <span class="flag-icon-small fi fi-cn"></span>
+                </div>
+                <div class="flag-option" data-value="hi" data-flag="fi-in" title="हिन्दी">
+                    <span class="flag-icon-small fi fi-in"></span>
+                </div>
+                <div class="flag-option" data-value="fr" data-flag="fi-fr" title="Français">
+                    <span class="flag-icon-small fi fi-fr"></span>
+                </div>
+                <div class="flag-option" data-value="de" data-flag="fi-de" title="Deutsch">
+                    <span class="flag-icon-small fi fi-de"></span>
+                </div>
+                <div class="flag-option" data-value="ar" data-flag="fi-sa" title="العربية">
+                    <span class="flag-icon-small fi fi-sa"></span>
+                </div>
+                <div class="flag-option" data-value="ru" data-flag="fi-ru" title="Русский">
+                    <span class="flag-icon-small fi fi-ru"></span>
+                </div>
+                <div class="flag-option" data-value="ja" data-flag="fi-jp" title="日本語">
+                    <span class="flag-icon-small fi fi-jp"></span>
+                </div>
+                <div class="flag-option" data-value="pt" data-flag="fi-pt" title="Português">
+                    <span class="flag-icon-small fi fi-pt"></span>
+                </div>
+                <div class="flag-option" data-value="it" data-flag="fi-it" title="Italiano">
+                    <span class="flag-icon-small fi fi-it"></span>
+                </div>
+                <div class="flag-option" data-value="ko" data-flag="fi-kr" title="한국어">
+                    <span class="flag-icon-small fi fi-kr"></span>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 </div>
                 </div>
                 <button class="menu-toggle">
